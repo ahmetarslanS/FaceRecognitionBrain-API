@@ -1,6 +1,6 @@
-# Face Recognition Brain - Backend
+# Smart Brain - Backend
 
-This is the backend of the **Face Recognition Brain** application, which provides user registration, login, profile management, and face recognition features. The backend interacts with the **Clarifai API** to perform face detection on user-uploaded images. Built with **Node.js**, **Express**, and **PostgreSQL**, this backend supports the entire functionality of the **Face Recognition Brain** web application.
+This is the backend of the **Smart Brain** application, which provides user registration, login, profile management, and face recognition features. The backend interacts with the **Clarifai API** to perform face detection on user-uploaded images. Built with **Node.js**, **Express**, and **PostgreSQL**, this backend supports the entire functionality of the **Smart Brain** web application.
 
 ## Demo
 
@@ -41,8 +41,8 @@ You can view the live demo [here](https://smart-brain-frontend-29200474981c.hero
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ahmetarslanS/FaceRecognitionBrain-API
-   cd facerecognitionbrain-api
+   git clone https://github.com/ahmetarslanS/SmartBrain-API
+   cd smartbrain-api
 
 2. Install the required dependencies:
    ```bash
