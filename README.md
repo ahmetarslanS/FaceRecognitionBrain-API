@@ -4,13 +4,13 @@ This is the backend of the **Face Recognition Brain** application, which provide
 
 ## Demo
 
-You can test the API endpoints by using a tool like **Postman** or **cURL** with the following available routes.
+You can view the live demo [here](https://smart-brain-frontend-29200474981c.herokuapp.com/), or you can test the API endpoints by using a tool like **Postman** or **cURL** with the following available routes.
 
 
 ## Tech Stack
 ### Frontend
 - **React.js**: JavaScript library for building user interfaces.
-- **React-Redux**: State management library to manage the application's state.
+- **React Hooks**: For managing component state and lifecycle methods.
 - **CSS**: For styling the user interface.
 ### Backend
 - **Node.js**: JavaScript runtime environment used for server-side scripting.
@@ -57,8 +57,6 @@ You can test the API endpoints by using a tool like **Postman** or **cURL** with
 4. Start the server
    ```bash
     npm start
-
-The API will be available at http://localhost:3000.
 
 - Alternatively, for development purposes, use `nodemon` to automatically restart the server on file changes:
     ```bash
@@ -159,15 +157,13 @@ The database contains two main tables:
 * **login:** Stores email and hashed password.
 * **users:** Stores user details (name, email, entries, join date).
 
-## Running Tests
-You can test the API endpoints using tools like **Postman** or **cURL**, or write unit tests with frameworks such as **Jest**.
-
 ## Deployment
 
 To deploy this backend:
-    1. Set up environment variables (DATABASE_URL and API_CLARIFAI).
-    2. Push the code to your cloud server (e.g., Heroku, AWS).
-    3. Ensure PostgreSQL is properly configured and accessible.
+
+        1. Set up environment variables (DATABASE_URL and API_CLARIFAI).
+        2. Push the code to your cloud server (e.g., Heroku, AWS).
+        3. Ensure PostgreSQL is properly configured and accessible.
 
 ## Contributing
 
