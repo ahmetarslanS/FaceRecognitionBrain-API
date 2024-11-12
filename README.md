@@ -60,6 +60,119 @@ You can test the API endpoints by using a tool like **Postman** or **cURL** with
 
 The API will be available at http://localhost:3000.
 
-Alternatively, for development purposes, use ```nodemon to automatically restart the server on file changes:
-   ```bash
+- Alternatively, for development purposes, use `nodemon` to automatically restart the server on file changes:
+    ```bash
     npm run start:dev
+
+- The API will be available at http://localhost:3000.
+
+## API Endpoints
+
+### `POST /signin`
+
+* **Description:** Sign in with email and password to get user information.
+* **Request Body:** 
+
+    ```json
+    {
+        "email": "user@example.com",
+        "password": "your_password"
+    }
+
+* **Response:** 
+    ```json
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "user@example.com",
+        "entries": 0,
+        "joined": "2023-10-10T12:00:00.000Z"
+    }
+
+### `POST /register`
+
+* **Description:** Register a new user with email, name, and password.
+* **Request Body:**
+
+    ```json
+    {
+        "email": "user@example.com",
+        "name": "John Doe",
+        "password": "your_password"
+    }
+
+* **Response:** 
+    ```json
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "user@example.com",
+        "entries": 0,
+        "joined": "2023-10-10T12:00:00.000Z"
+    }
+
+### `GET /profile/:id`
+
+* **Description:** Retrieve a user's profile by ID.
+* **Request Parameters:** `id` (User ID)
+
+* **Response:** 
+    ```json
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "user@example.com",
+        "entries": 0,
+        "joined": "2023-10-10T12:00:00.000Z"
+    }
+
+### `PUT /image`
+
+* **Description:** Increment the user's entries count when they submit an image.
+* **Request Body:**
+    ```json
+    {
+        "id": 1
+    }
+
+* **Response:** 
+    ```json
+    {
+        "entries": 1
+    }
+
+### `POST /imageurl`
+
+* **Description:** Detect faces in an image using the Clarifai API.
+* **Request Body:**
+    ```json
+    {
+        "input": "image_url"
+    }
+
+* **Response:** A JSON object with the detected face data.
+
+## Database Schema
+
+The database contains two main tables:
+
+* **login:** Stores email and hashed password.
+* **users:** Stores user details (name, email, entries, join date).
+
+## Running Tests
+You can test the API endpoints using tools like **Postman** or **cURL**, or write unit tests with frameworks such as **Jest**.
+
+## Deployment
+
+To deploy this backend:
+    1. Set up environment variables (DATABASE_URL and API_CLARIFAI).
+    2. Push the code to your cloud server (e.g., Heroku, AWS).
+    3. Ensure PostgreSQL is properly configured and accessible.
+
+## Contributing
+
+Feel free to fork the repository and submit pull requests for improvements, bug fixes, or new features.
+
+## License
+
+This project is licensed under the MIT License.
