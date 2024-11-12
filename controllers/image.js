@@ -1,6 +1,6 @@
 const Clarifai = require('clarifai');
 const app = new Clarifai.App({
-    apiKey: 'f98b062c9a324925a3b637531c15305b'  //ENV VARIABLE
+    apiKey: process.env.API_CLARIFAI  //ENV VARIABLE
 });
 const handleApiCall = (req, res) => {
     // HEADS UP! Sometimes the Clarifai Models can be down or not working as they are constantly getting updated.
